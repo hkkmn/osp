@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Delete";
+}
+@model QuestionModel
+
+<h1>Delete</h1>
+<h3>"<b>@Model.QuestionId</b>" Adlı soru Silinecektir Onaylıyor musunuz?</h3>
+<form asp-controller="Admin" asp-action="Delete" method="post">
+    <input type="hidden" asp-for="QuestionId"/>
+    <a asp-action="Index" class="btn btn-outline-secondary">Geri Dön</a>
+    <input type="submit" value="Sil" class="btn btn-outline-danger" />
+</form>
+

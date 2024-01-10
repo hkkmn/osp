@@ -1,0 +1,63 @@
+﻿
+
+@{
+    ViewData["Title"] = "Edit";
+}
+@model QuestionModel
+
+<h1>Edit</h1>
+<h2>Ürün Düzenle</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="Edit">
+            <div class="mb-3">
+                <label asp-for="QuestionId" class="form-label">Ürün Adı</label>
+                <input type="text" class="form-control" asp-for="QuestionId">
+                <span asp-validation-for="QuestionId" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="QuestionText" class="form-label">Ürün Fiyatı</label>
+                <input type="text" class="form-control" asp-for="QuestionText">
+                <span asp-validation-for="QuestionText" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="OptionA" class="form-label">Ürün Açıklama</label>
+                <textarea rows="3" class="form-control" asp-for="OptionA"></textarea>
+                <span asp-validation-for="OptionA" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="OptionB" class="form-label">Durumu</label>
+                <input type="checkbox" class="form-check" asp-for="OptionB"> Aktif
+
+            </div>
+            <div class="mb-3">
+                <label asp-for="OptionC" class="form-label">Durumu</label>
+                <input type="checkbox" class="form-check" asp-for="OptionC"> Aktif
+
+            </div>
+            <div class="mb-3">
+                <label asp-for="OptionD" class="form-label">Durumu</label>
+                <input type="checkbox" class="form-check" asp-for="OptionC"> Aktif
+
+            </div>
+            <div class="mb-3">
+                <label asp-for="OptionE" class="form-label">Durumu</label>
+                <input type="checkbox" class="form-check" asp-for="OptionE"> Aktif
+
+            </div>
+
+            <div class="mb-3">
+                <input type="hidden" asp-for="QuestionId" />
+                <a asp-action="Index" class="btn btn-outline-secondary">Geri Dön</a>
+                <input type="submit" value="Güncelle" class="btn btn-outline-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"></partial>
+}
+
+
